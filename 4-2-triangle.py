@@ -19,12 +19,12 @@ try:
             bin_str = decimal2binary(dec)
             for i in range (8):
                 RPi.GPIO.output(dac[i], bin_str[i])
-            time.sleep(per)
+            time.sleep(per/256/2)
         for dec in range (255):
             bin_str = decimal2binary(255 - dec)
             for i in range (8):
                 RPi.GPIO.output(dac[i], bin_str[i])
-            time.sleep(per)
+            time.sleep(per/256/2)
         
 finally:
     RPi.GPIO.output(dac, 0)

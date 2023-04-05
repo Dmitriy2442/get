@@ -8,7 +8,7 @@ p.start(0)
 
 try:
     while True:
-        f = int(input("enter your cicle period:"))
+        f = int(input("Enter your cicle period:"))
         p.ChangeDutyCycle(f)
         print(3.3 * f / 100)
    
